@@ -33,7 +33,9 @@
                     "primary-content": "white",
                     "neutral": "black",
                     "neutral-content": "white",
-                    "secondary": "white"
+                    "secondary": "white",
+                    "base-300": "#CCC",
+                    "base-200": "#DDD"
                 }
             }
         ]

@@ -1,6 +1,6 @@
 <template>
   <div class="col-span-6">
-    <div class="hero bg-base-300 rounded-lg">
+    <div class="hero rounded-lg !bg-base-300">
       <div class="hero-content flex-col lg:flex-row my-12">
         <img src="/harley-davidson-4ixHdlcROPI-unsplash.jpg" class="max-w-sm rounded-lg shadow-2xl">
         <div>
