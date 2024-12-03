@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray-300 min-h-screen bg-cover" style="background-image:url('/francisco-requena-A9tP39BIn28-unsplash.jpg')">
+    <section class="bg-gray-300 min-h-screen bg-cover bg-fixed" style="background-image:url('/francisco-requena-A9tP39BIn28-unsplash.jpg')">
         <header>
             <Header />
         </header>

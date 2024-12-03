@@ -2,7 +2,10 @@
   <section class="header bg-[#043451] px-3 py-3 mb-3">
     <section class="flex justify-between mx-auto max-w-6xl">
       <a href="/" class="flex">
-        <img src="/bikershop-logo.svg" class="h-12" alt="">
+        <img src="/logo.svg" class="h-10 my-3" alt="">
+        <p class="flex items-center ml-6 text-xl text-white font-bold">
+          Gummersbach-Biker.shop
+        </p>
       </a>
       <nav>
         <ul class="flex space-x-6 mt-3 items-center mr-6">
