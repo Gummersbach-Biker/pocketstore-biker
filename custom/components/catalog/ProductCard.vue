@@ -27,7 +27,7 @@ const i18n = useI18n();
 const locale = i18n.locale;
 
 const { identifier } = defineProps({
-  identifier: { type: String, requiered: true }
+  identifier: { type: String, required: true }
 });
 
 const store = usePocketbaseStore();
@@ -36,6 +36,6 @@ const pb = new PocketBase(url.value);
 const product = ref({});
 
 onMounted(async () => {
-  product.value = (await pb.collection('products').getOne(identifier ?? ''));
+  product.value = (await pb.collection('products').getFirstListItem('slug="' + identifier + '"'));
 });
 </script>
