@@ -40,11 +40,10 @@
                 <div class="modal-action">
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
+                        <button class="btn" @click="open = !open">Close</button>
                     </form>
                 </div>
             </div>
-            <label class="modal-backdrop" for="my_modal_1">Close</label>
         </dialog>
     </section>
 </template>
