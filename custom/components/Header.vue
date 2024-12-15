@@ -7,7 +7,8 @@
           Gummersbach-Biker.shop
         </p>
       </a>
-      <nav>
+      <HeaderMobileNavigation></HeaderMobileNavigation>
+      <nav class="hidden md:block">
         <ul class="flex space-x-6 mt-3 items-center mr-6">
           <li>
             <a href="/" class="text-white">
@@ -42,7 +43,7 @@
 
 <script setup lang="ts">
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { faMotorcycle, faHeart,faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faMotorcycle, faHeart, faUser, faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <style>
