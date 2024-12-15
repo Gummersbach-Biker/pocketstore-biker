@@ -2,7 +2,7 @@
   <div class="col-span-6">
     <div class="hero rounded-lg !bg-base-300">
       <div class="hero-content flex-col lg:flex-row my-12">
-        <img src="/harley-davidson-4ixHdlcROPI-unsplash.jpg" class="max-w-sm rounded-lg shadow-2xl">
+        <img src="/harley-davidson-4ixHdlcROPI-unsplash.jpg" class="md:max-w-sm rounded-lg shadow-2xl">
         <div>
           <h1 class="text-3xl font-bold">Willkommen bei Gummersbach-Biker.shop</h1>
           <p data-testid="p-hero" class="py-6">
