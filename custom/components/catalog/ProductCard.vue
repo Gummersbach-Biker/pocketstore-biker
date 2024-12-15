@@ -1,9 +1,9 @@
 <template>
   <div v-if="product" class="card shadow-xl bg-primary border-4 border-white">
     <figure>
-      <a :href="'/' + locale + '/product/' + product.slug + '.html'">
+      <NuxtLink :to="'/' + locale + '/product/' + product.slug + '.html'">
         <img src="/product-motorrad.jpg" alt="Shoes">
-      </a>
+      </NuxtLink>
     </figure>
     <div class="card-body">
       <h2 class="card-title text-white">{{ product.name }}</h2>

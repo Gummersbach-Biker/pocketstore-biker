@@ -11,7 +11,7 @@
       <nav class="hidden md:block">
         <ul class="flex space-x-6 mt-3 items-center mr-6">
           <li>
-            <a href="/" class="text-white">
+            <a href="/de/category/bowling.html" class="text-white">
               <Fa :icon="faMotorcycle" class="mr-3" />
               <span>Motorräder</span>
             </a>

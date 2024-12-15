@@ -1,7 +1,7 @@
 <template>
   <div class="col-span-6">
     <div class="hero rounded-lg !bg-base-300">
-      <div class="hero-content flex-col lg:flex-row my-12">
+      <div class="hero-content flex-col lg:flex-row my-6 md:my-12">
         <img src="/harley-davidson-4ixHdlcROPI-unsplash.jpg" class="md:max-w-sm rounded-lg shadow-2xl">
         <div>
           <h1 class="text-3xl font-bold">Willkommen bei Gummersbach-Biker.shop</h1>

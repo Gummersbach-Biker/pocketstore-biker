@@ -8,10 +8,35 @@
                 <Fa :icon="faBars" color="white" size="2x" />
             </section>
         </nav>
-        <dialog id="my_modal_1" class="modal modal-top" :open="open">
+        <dialog id="my_modal_1" class="modal modal-top" :class="{ 'hidden': !open }" :open="open">
             <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
+                <h3 class="text-lg font-bold mb-3">Navigation</h3>
+                <section class="grid grid-cols-6 gap-3">
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                    <div class="col-span-3">
+                        <a href="" class="btn btn-primary btn-block">Test</a>
+                    </div>
+                </section>
                 <div class="modal-action">
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
