@@ -6,17 +6,18 @@ RUN apk add go git
 COPY . /var/www/demo
 WORKDIR /var/www/demo
 RUN go run bin/update.go
+RUN go run bin/extend.go
 
 WORKDIR /var/www/demo/storefront
 RUN go run bin/lang.go
 
 # Install global dependencies
-RUN npm install -g pm2 bun npm
+RUN npm install -g pm2 npm
 
 # Install project dependencies
-RUN bun install && bun run build
+RUN npm install && npx nuxi build
 
 # Expose the desired port
-EXPOSE 300
+EXPOSE 4000
 
-CMD ["bun", "run", "preview"]
+CMD ["npx", "nuxi", "preview"]
