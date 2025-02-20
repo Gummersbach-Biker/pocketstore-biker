@@ -26,5 +26,9 @@ const store = useBreadcrumbStore();
 onMounted(() => {
     tracking.trackPage()
     store.clear()
+
+    useHead({
+        titlle: 'Gummersbach-Biker.shop'
+    });
 });
 </script>
