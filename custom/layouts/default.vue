@@ -28,7 +28,7 @@ onMounted(() => {
     store.clear()
 
     useHead({
-        titlle: 'Gummersbach-Biker.shop'
+        title: 'Gummersbach-Biker.shop'
     });
 });
 </script>
