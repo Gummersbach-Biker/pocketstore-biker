@@ -28,7 +28,10 @@ onMounted(() => {
     store.clear()
 
     useHead({
-        title: 'Gummersbach-Biker.shop'
+        title: 'Gummersbach-Biker.shop',
+        link: [
+            { rel: 'manifest', href: '/site.webmanifest' }
+        ]
     });
 });
 </script>
