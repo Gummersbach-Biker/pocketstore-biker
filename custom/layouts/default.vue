@@ -1,5 +1,6 @@
 <template>
-    <section class="bg-gray-300 min-h-screen bg-cover bg-fixed" style="background-image:url('/francisco-requena-A9tP39BIn28-unsplash.jpg')">
+    <section class="bg-gray-300 min-h-screen bg-cover bg-fixed"
+        style="background-image:url('/francisco-requena-A9tP39BIn28-unsplash.jpg')">
         <header>
             <Header />
         </header>
@@ -30,6 +31,7 @@ onMounted(() => {
     useHead({
         title: 'Gummersbach-Biker.shop',
         link: [
+            { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
             { rel: 'manifest', href: '/site.webmanifest' }
         ]
     });
