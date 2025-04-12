@@ -13,16 +13,11 @@
                 <h3 class="text-lg font-bold mb-3">Navigation</h3>
                 <section class="grid grid-cols-6 gap-3">
                     <div class="col-span-3">
-                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
+                        <a href="/de/fahrzeuge" class="btn btn-primary btn-block">Fahrzeuge mieten</a>
                     </div>
-                    <div class="col-span-3">
-                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
+                    <div v-for="category in categories" class="col-span-3">
+                        <a :href="'/de/category/' + category.slug + '.html'" class="btn btn-neutral btn-block">{{
+                            category.name }}</a>
                     </div>
                 </section>
                 <div class="modal-action">
@@ -39,7 +34,17 @@
 <script setup lang="ts">
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { faMotorcycle, faHeart, faUser, faTimes, faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { usePocketbaseStore } from '~/stores/pocketbase'
+import PocketBase from 'pocketbase'
+
+const categories = ref([]);
+const { url } = usePocketbaseStore();
+const pb = new PocketBase(url);
 
 const open = ref(false);
+
+onMounted(async () => {
+    categories.value = await pb.collection('categories').getFullList(25);
+});
 
 </script>

@@ -1,50 +1,21 @@
 <template>
   <section class="header bg-[#043451] px-3 py-3 mb-3">
-    <section class="flex justify-between mx-auto max-w-6xl">
-      <a href="/" class="flex">
-        <img src="/logo.svg" class="h-10 my-3" alt="">
-        <p class="flex items-center ml-6 text-xl text-white font-bold">
-          Gummersbach-Biker.shop
-        </p>
-      </a>
+    <section class="flex justify-between mx-auto max-w-6xl items-center">
+      <div class="flex flex-col">
+        <a href="/" class="flex">
+          <img src="/logo.svg" class="h-10 my-3" alt="">
+          <p class="flex ml-6 mt-5 text-white font-bold">
+            Gummersbach
+            -Biker.shop
+          </p>
+        </a>
+        <input type="search" class="input input-sm text-center placeholder:text-red-400" placeholder="Wonach suchst du ?">
+      </div>
       <HeaderMobileNavigation></HeaderMobileNavigation>
-      <nav class="hidden md:block">
-        <ul class="flex space-x-6 mt-3 items-center mr-6">
-          <li>
-            <a href="/de/category/bowling.html" class="text-white">
-              <Fa :icon="faMotorcycle" class="mr-3" />
-              <span>Motorräder</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" class="text-white">
-              <Fa :icon="faUser" class="mr-3" />
-              <span>Klamotten</span>
-
-            </a>
-          </li>
-          <li>
-            <a href="/" class="text-white">
-              <Fa :icon="faHeart" class="text-red-400 mr-3" />
-              <span>Wunschliste</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" class="text-white">
-              <Fa :icon="faShoppingCart" />
-              <span class="ml-3">12</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <HeaderDesktopNavigation />
     </section>
   </section>
 </template>
-
-<script setup lang="ts">
-import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { faMotorcycle, faHeart, faUser, faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-</script>
 
 <style>
 @font-face {
