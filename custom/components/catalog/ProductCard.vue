@@ -22,6 +22,7 @@
 <script lang="ts" setup>
 import PocketBase from 'pocketbase';
 import { usePocketbaseStore } from '~/stores/pocketbase';
+import { onUpdated } from 'vue'
 
 const i18n = useI18n();
 const locale = i18n.locale;
@@ -30,12 +31,20 @@ const { identifier } = defineProps({
   identifier: { type: String, required: true }
 });
 
+onUpdated(() => {
+  load();
+});
+
 const store = usePocketbaseStore();
 const { url } = storeToRefs(store);
 const pb = new PocketBase(url.value);
 const product = ref({});
 
+const load = async () => {
+  product.value = await pb.collection('products').getOne(identifier);
+}
+
 onMounted(async () => {
-  product.value = (await pb.collection('products').getFirstListItem('id="' + identifier + '"'));
+  load();
 });
 </script>
