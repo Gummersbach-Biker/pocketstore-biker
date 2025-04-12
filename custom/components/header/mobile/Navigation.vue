@@ -13,28 +13,16 @@
                 <h3 class="text-lg font-bold mb-3">Navigation</h3>
                 <section class="grid grid-cols-6 gap-3">
                     <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
+                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
                     </div>
                     <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
+                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
                     </div>
                     <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
+                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
                     </div>
                     <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
-                    </div>
-                    <div class="col-span-3">
-                        <a href="" class="btn btn-primary btn-block">Test</a>
+                        <a href="/de/category/helme.html" class="btn btn-primary btn-block">Helme</a>
                     </div>
                 </section>
                 <div class="modal-action">
