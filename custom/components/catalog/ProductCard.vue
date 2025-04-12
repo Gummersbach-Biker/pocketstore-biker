@@ -2,7 +2,7 @@
   <div v-if="product" class="card shadow-xl bg-primary border-4 border-white">
     <figure>
       <NuxtLink :to="'/' + locale + '/product/' + product.slug + '.html'">
-        <img src="/product-motorrad.jpg" alt="Shoes">
+        <img :src="url + '/api/files/' + product.collectionId + '/' + product.id + '/' + product.cover" alt="Shoes">
       </NuxtLink>
     </figure>
     <div class="card-body">
@@ -38,6 +38,10 @@ const product = ref({});
 
 const load = async () => {
   product.value = await pb.collection('products').getOne(props.identifier);
+}
+
+const replace = (name)=>{
+  return name;
 }
 
 watch(
