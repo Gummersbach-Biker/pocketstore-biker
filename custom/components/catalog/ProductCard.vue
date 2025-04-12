@@ -22,17 +22,13 @@
 <script lang="ts" setup>
 import PocketBase from 'pocketbase';
 import { usePocketbaseStore } from '~/stores/pocketbase';
-import { onUpdated } from 'vue'
+import { watch } from 'vue'
 
 const i18n = useI18n();
 const locale = i18n.locale;
 
-const { identifier } = defineProps({
+const props = defineProps({
   identifier: { type: String, required: true }
-});
-
-onUpdated(() => {
-  load();
 });
 
 const store = usePocketbaseStore();
@@ -41,10 +37,15 @@ const pb = new PocketBase(url.value);
 const product = ref({});
 
 const load = async () => {
-  product.value = await pb.collection('products').getOne(identifier);
+  product.value = await pb.collection('products').getOne(props.identifier);
 }
 
-onMounted(async () => {
-  load();
-});
+watch(
+  () => props.identifier,
+  (newValue, oldValue) => {
+    load();
+  },
+  { immediate: true } // Trigger immediately on mount
+);
+
 </script>
