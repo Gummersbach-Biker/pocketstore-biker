@@ -1,0 +1,35 @@
+<template>
+    <section class="page mx-auto max-w-6xl my-6">
+        <section class="grid grid-cols-6 gap-3">
+            <div v-for="vehicle in vehicles" class="col-span-6 sm:col-span-3 md:col-span-2">
+                <FahrzeugCard :identifier="vehicle.id" :vehicle="vehicle" />
+            </div>
+        </section>
+    </section>
+</template>
+
+<script setup lang="ts">
+import { usePocketBase } from '~/util/pocketbase'
+import { useBreadcrumbStore } from '~/stores/breadcrumb';
+import { storeToRefs } from 'pinia'
+
+const store = useBreadcrumbStore();
+const vehicles = ref([]);
+
+const pb = usePocketBase();
+
+const load = async () => {
+    vehicles.value = await pb.collection('vehicles').getFullList(25);
+}
+
+onMounted(() => {
+    load();
+
+    store.clear();
+    store.add({
+        label: 'Fahrzeuge',
+        link: 'fahrzeuge/',
+        id: 'fahrzeuge'
+    });
+})
+</script>
