@@ -86,7 +86,7 @@ onMounted(async () => {
           <CatalogProductCard :identifier="product.id" />
         </div>
       </template>
-      <div v-else class="col-span-6">
+      <div v-else class="col-span-6 mb-3">
         <p class="alert alert-warning">Es gibt noch keine Produkte in der Kategorie.</p>
       </div>
     </div>
