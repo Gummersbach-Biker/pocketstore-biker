@@ -7,7 +7,7 @@
 # Data for Pocketbase
 [submodule "pb_data"]
 	path = pb_data
-	url = https://github.com/pocketstore-io/pb_data.git
+	url = https://github.com/Gummersbach-Biker/pb_data.git
 	branch = main
 
 # Storefront, extendable by Custom
