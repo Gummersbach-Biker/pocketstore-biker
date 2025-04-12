@@ -2,23 +2,44 @@
 import PocketBase from 'pocketbase';
 import { usePocketbaseStore } from '~/stores/pocketbase';
 import { useBreadcrumbStore } from '~/stores/breadcrumb';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const store = usePocketbaseStore();
 const storeBreadcrumb = useBreadcrumbStore();
 const { url } = storeToRefs(store);
 const pb = new PocketBase(url.value);
+const init = ref(false);
 const category = ref({});
 const products = ref([]);
 const categories = ref([]);
 const query = ref('');
 const min = ref(0);
 const max = ref(100);
+const selectedCategory = ref('');
 const route = useRoute();
+const router = useRouter();
 
 watch(query, () => {
   load()
 }, { deep: true });
+
+watch(min.value, (value) => {
+  if (value > max.value) {
+    max.value = value
+  }
+});
+
+watch(max, (value) => {
+  if (value > min.value) {
+    max.value = value
+  }
+});
+
+watch(selectedCategory, (value) => {
+  if(init.value){
+    router.push('/de/category/' + value + '.html');
+  }
+});
 
 
 const load = async () => {
@@ -37,12 +58,14 @@ const load = async () => {
 
 onMounted(async () => {
   category.value = await pb.collection('categories').getFirstListItem('slug="' + route.params.slug.replace('.html', '') + '"');
+  selectedCategory.value = category.value.slug;
   categories.value = await pb.collection('categories').getFullList(25);
   load();
+  init.value = true;
   storeBreadcrumb.clear();
   storeBreadcrumb.add({
     label: 'Category View',
-    link: 'category/bowling',
+    link: 'category/' + category.slug,
     id: 'category-view'
   });
 });
@@ -63,8 +86,9 @@ onMounted(async () => {
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
             <label for="" class="label text-sm font-bold">Category</label>
-            <select class="select w-full select-bordered bg-gray-400 select-primary lg:w-auto">
-              <option v-for="item in categories" :value="item.id">{{ item.name }}</option>
+            <select v-model="selectedCategory"
+              class="select w-full select-bordered bg-gray-400 select-primary lg:w-auto">
+              <option v-for="item in categories" :value="item.slug">{{ item.name }}</option>
             </select>
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
