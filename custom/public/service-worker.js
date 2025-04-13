@@ -1,4 +1,4 @@
-const CACHE_NAME = 'image-cache-v1';
+const CACHE_NAME = 'image-cache-'+ new Date().toLocaleDateString('de');
 const IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif','json'];
 
 // Install event to cache images
