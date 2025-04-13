@@ -27,4 +27,5 @@ jobs:
             git pull
             bun install
             bun run build
-            pm2 restart ecosystem.config.cjs
+            docker compose down
+            docker compose up
