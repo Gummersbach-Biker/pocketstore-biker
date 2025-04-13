@@ -36,7 +36,7 @@ watch(max, (value) => {
 });
 
 watch(selectedCategory, (value) => {
-  if(init.value){
+  if (init.value) {
     router.push('/de/category/' + value + '.html');
   }
 });
@@ -48,6 +48,9 @@ const load = async () => {
   if (query.value) {
     filter += '&& name ~ "%' + query.value + '%"';
   }
+
+  filter += '&& price < "'+max.value+'"';
+  filter += '&& price > "'+min.value+'"';
 
   products.value = (await pb.collection('products').getList(
     1, 12, {
