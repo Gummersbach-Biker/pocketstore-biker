@@ -3,12 +3,10 @@
 	path = pb_hooks
 	url = https://github.com/pocketstore-io/pb_hooks.git
 	branch = main
-
 # Data for Pocketbase
 [submodule "pb_data"]
 	path = pb_data
 	url = git@github.com:Gummersbach-Biker/pb_data.git
-
 # Storefront
 [submodule "storefront"]
 	path = storefront
