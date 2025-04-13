@@ -1,6 +1,6 @@
 <template>
     <section class="mobile-nav md:hidden">
-        <nav class="mt-4 mr-4">
+        <nav class="mt-4 sm:mt-4 mr-2">
             <section class="times" v-if="open" @click="open = !open">
                 <Fa :icon="faTimes" color="white" size="2x" />
             </section>
