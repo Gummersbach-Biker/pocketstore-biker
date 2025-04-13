@@ -5,12 +5,6 @@
 	branch = main
 
 # Data for Pocketbase
-[submodule "pb_data"]
-	path = pb_data
-	url = https://github.com/pocketstore-io/pb_data.git
-	branch = main
-
-# Storefront, extendable by Custom
 [submodule "storefront"]
 	path = storefront
 	url = https://github.com/pocketstore-io/storefront.git
@@ -21,3 +15,6 @@
 	path = pb_migrations
 	url = https://github.com/pocketstore-io/pb_migrations.git
 	branch = main
+[submodule "pb_data"]
+	path = pb_data
+	url = git@github.com:Gummersbach-Biker/pb_data.git
