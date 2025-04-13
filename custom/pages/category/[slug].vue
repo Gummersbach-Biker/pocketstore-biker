@@ -27,12 +27,14 @@ watch(min, (value) => {
   if (value > max.value) {
     max.value = value
   }
+  load();
 });
 
 watch(max, (value) => {
   if (value > min.value) {
     max.value = value
   }
+  load();
 });
 
 watch(selectedCategory, (value) => {
@@ -48,6 +50,9 @@ const load = async () => {
   if (query.value) {
     filter += '&& name ~ "%' + query.value + '%"';
   }
+
+  filter += '&& price <= '+max.value
+  filter += '&& price >= '+min.value
 
   products.value = (await pb.collection('products').getList(
     1, 12, {
@@ -82,7 +87,7 @@ onMounted(async () => {
         <section class="grid grid-cols-6 gap-3">
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
             <label for="" class="label text-sm font-bold">Name</label>
-            <input type="text" v-model="query" class="input w-full input-bordered bg-gray-400 input-primary lg:w-auto">
+            <input type="text" v-model="query" class="input w-full input-bordered bg-gray-400 input-primary">
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
             <label for="" class="label text-sm font-bold">Kategorie</label>
