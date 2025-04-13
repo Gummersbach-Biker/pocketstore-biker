@@ -28,4 +28,4 @@ jobs:
             bun install
             bun run build
             docker compose down
-            docker compose up
+            docker compose up -d
