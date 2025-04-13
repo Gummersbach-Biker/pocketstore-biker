@@ -23,7 +23,7 @@ watch(query, () => {
   load()
 }, { deep: true });
 
-watch(min.value, (value) => {
+watch(min, (value) => {
   if (value > max.value) {
     max.value = value
   }
@@ -48,9 +48,6 @@ const load = async () => {
   if (query.value) {
     filter += '&& name ~ "%' + query.value + '%"';
   }
-
-  filter += '&& price < "'+max.value+'"';
-  filter += '&& price > "'+min.value+'"';
 
   products.value = (await pb.collection('products').getList(
     1, 12, {
@@ -88,20 +85,20 @@ onMounted(async () => {
             <input type="text" v-model="query" class="input w-full input-bordered bg-gray-400 input-primary lg:w-auto">
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
-            <label for="" class="label text-sm font-bold">Category</label>
+            <label for="" class="label text-sm font-bold">Kategorie</label>
             <select v-model="selectedCategory"
-              class="select w-full select-bordered bg-gray-400 select-primary lg:w-auto">
+              class="select w-full select-bordered bg-gray-400 select-primary">
               <option v-for="item in categories" :value="item.slug">{{ item.name }}</option>
             </select>
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
-            <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900">Min ({{ min }})
+            <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900">Preis Min ({{ min }})
             </label>
             <input id="minmax-range" v-model="min" type="range" min="0" max="100"
               class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
           </div>
           <div class="col-span-6 md:col-span-2 bg-white px-3 py-3">
-            <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900">Max ({{ max }})
+            <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900">Preis Max ({{ max }})
             </label>
             <input id="minmax-range" v-model="max" type="range" min="0" max="100"
               class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
