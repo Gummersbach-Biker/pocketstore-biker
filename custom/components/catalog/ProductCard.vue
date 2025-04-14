@@ -35,9 +35,12 @@ const store = usePocketbaseStore();
 const { url } = storeToRefs(store);
 const pb = new PocketBase(url.value);
 const product = ref({});
+const brandNames = ref('');
 
 const load = async () => {
-  product.value = await pb.collection('products').getOne(props.identifier);
+  product.value = await pb.collection('products').getOne(props.identifier, {
+    expand: 'brands'
+  });
 }
 
 watch(
