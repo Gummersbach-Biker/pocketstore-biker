@@ -4,7 +4,7 @@
       <div class="flex flex-col">
         <a href="/" class="flex">
           <img src="/logo.svg" class="h-10 my-3" alt="">
-          <p class="flex ml-6 text-white font-bold items-center">
+          <p class="flex ml-2 text-white font-bold items-center">
             Gummersbach-Biker.shop
           </p>
         </a>
