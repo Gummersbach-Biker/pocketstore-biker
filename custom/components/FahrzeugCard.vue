@@ -10,13 +10,13 @@
                 {{ props.vehicle.desc }}
             </p>
         </div>
-        <div class="px-6 pt-4 pb-2">
+        <div class="px-6 pt-4 pb-2 mb-3 space-x-3 space-y-3">
             <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 badge badge-primary">#tag{{ props.vehicle.tag }}</span>
+                class="badge badge-primary px-3 py-3 cursor-pointer">#tag{{ props.vehicle.tag }}</span>
             <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#weekend{{ props.vehicle.wochenende }}</span>
+                class="badge badge-primary px-3 py-3 cursor-pointer">#weekend{{ props.vehicle.wochenende }}</span>
             <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#woche{{ props.vehicle.woche }}</span>
+                class="badge badge-primary px-3 py-3 cursor-pointer">#woche{{ props.vehicle.woche }}</span>
         </div>
     </div>
 </template>
