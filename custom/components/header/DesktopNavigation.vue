@@ -7,25 +7,25 @@
         </div>
         <ul class="flex space-x-6 text-sm">
             <li>
-                <a href="/category/helme.html" class="text-blue-600">
+                <a href="/de/category/helme.html" class="text-blue-600">
                     <Fa :icon="faHatCowboy" class="w-5 mr-3" color="white"/>
                     <span class="text-white">Helm</span>
                 </a>
             </li>
             <li>
-                <a href="/category/helme.html" class="text-blue-600">
+                <a href="/de/category/helme.html" class="text-blue-600">
                     <Fa :icon="faUser" class="w-5 mr-3" color="white"/>
                     <span class="text-white">Kleidung</span>
                 </a>
             </li>
             <li>
-                <a href="/category/helme.html" class="text-blue-600">
+                <a href="/de/category/helme.html" class="text-blue-600">
                     <Fa :icon="faHand" class="w-5 mr-3" color="white"/>
                     <span class="text-white">Handschuhe</span>
                 </a>
             </li>
             <li>
-                <a href="/category/motoräder.html" class="text-blue-600">
+                <a href="/de/category/motoräder.html" class="text-blue-600">
                     <Fa :icon="faMotorcycle" class="w-5 mr-3" color="white"/>
                     <span class="text-white">Motorräder</span>
                 </a>
