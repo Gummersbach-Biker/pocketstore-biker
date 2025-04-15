@@ -4,9 +4,8 @@
       <div class="flex flex-col">
         <a href="/" class="flex">
           <img src="/logo.svg" class="h-10 my-3" alt="">
-          <p class="flex ml-6 mt-2 sm:mt-5 text-white font-bold">
-            Gummersbach
-            -Biker.shop
+          <p class="flex ml-6 text-white font-bold items-center">
+            Gummersbach-Biker.shop
           </p>
         </a>
         <input type="search" v-model="query" class="md:flex hidden input input-sm text-center placeholder:text-red-400"
