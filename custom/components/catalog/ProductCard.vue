@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { usePocketbase } from '~/util/pocketbase';
+import { usePocketBase } from '~/util/pocketbase';
 import { watch } from 'vue'
 
 const i18n = useI18n();
@@ -29,7 +29,7 @@ const locale = i18n.locale;
 const props = defineProps({
   identifier: { type: String, required: true }
 });
-const pb = usePocketbase();
+const pb = usePocketBase();
 const product = ref({});
 const brandNames = ref('');
 

@@ -5,13 +5,13 @@
 </template>
 
 <script setup>
-import { usePocketbase } from "~/util/pocketbase";
+import { usePocketBase } from "~/util/pocketbase";
 
 const { identifier } = defineProps({
   identifier: { type: String, required: true },
 });
 
-const pb = usePocketbase();
+const pb = usePocketBase();
 const category = ref({});
 const products = ref([]);
 
