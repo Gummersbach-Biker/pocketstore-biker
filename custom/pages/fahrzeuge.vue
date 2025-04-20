@@ -10,8 +10,6 @@
 
 <script setup lang="ts">
 import { usePocketBase } from '~/util/pocketbase'
-import { storeToRefs } from 'pinia'
-
 const vehicles = ref([]);
 
 const pb = usePocketBase();
