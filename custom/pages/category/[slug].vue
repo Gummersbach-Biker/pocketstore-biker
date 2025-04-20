@@ -63,10 +63,10 @@
 </template>
 
 <script setup>
-import { usePocketbase } from '~/util/pocketbase';
+import { usePocketBase } from '~/util/pocketbase';
 import { useRoute, useRouter } from 'vue-router';
 
-const pb = usePocketbase();
+const pb = usePocketBase();
 const init = ref(false);
 const category = ref({});
 const products = ref([]);

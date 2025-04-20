@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import { usePocketbase } from '~/util/pocketbase';
-const pb = usePocketbase();
-
+import { usePocketBase } from '~/util/pocketbase';
+const pb = usePocketBase();
 </script>
