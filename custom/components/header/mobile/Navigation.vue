@@ -34,12 +34,10 @@
 <script setup lang="ts">
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { faMotorcycle, faHeart, faUser, faTimes, faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { usePocketbaseStore } from '~/stores/pocketbase'
-import PocketBase from 'pocketbase'
+import { usePocketbase } from '~/utils/pocketbase'
 
 const categories = ref([]);
-const { url } = usePocketbaseStore();
-const pb = new PocketBase(url);
+const pb = usePocketbase();
 
 const open = ref(false);
 

@@ -63,15 +63,10 @@
 </template>
 
 <script setup>
-import PocketBase from 'pocketbase';
-import { usePocketbaseStore } from '~/stores/pocketbase';
-import { useBreadcrumbStore } from '~/stores/breadcrumb';
+import { usePocketbase } from '~/utils/pocketbase';
 import { useRoute, useRouter } from 'vue-router';
 
-const store = usePocketbaseStore();
-const storeBreadcrumb = useBreadcrumbStore();
-const { url } = storeToRefs(store);
-const pb = new PocketBase(url.value);
+const pb = usePocketbase();
 const init = ref(false);
 const category = ref({});
 const products = ref([]);
@@ -164,12 +159,6 @@ onMounted(async () => {
     tags.value = await pb.collection('product_tags').getFullList(25);
     load();
     init.value = true;
-    storeBreadcrumb.clear();
-    storeBreadcrumb.add({
-        label: 'Category View',
-        link: 'category/' + category.slug,
-        id: 'category-view'
-    });
 });
 
 </script>
