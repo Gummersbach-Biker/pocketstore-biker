@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import {usePocketBase} from '@/utils/pocketbase';
+import {usePocketBase} from '@/util/pocketbase';
 import { useLocalStorage } from '@vueuse/core';
 
 const { product } = defineProps({

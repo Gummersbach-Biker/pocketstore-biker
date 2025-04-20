@@ -3,8 +3,7 @@
 </template>
 
 <script setup>
-import { usePocketbase } from '~/utils/pocketbase';
-import { useRoute, useRouter } from 'vue-router';
+import { usePocketbase } from '~/util/pocketbase';
 const pb = usePocketbase();
 
 </script>

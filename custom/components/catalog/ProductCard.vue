@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { usePocketbase } from '~/utils/pocketbase';
+import { usePocketbase } from '~/util/pocketbase';
 import { watch } from 'vue'
 
 const i18n = useI18n();

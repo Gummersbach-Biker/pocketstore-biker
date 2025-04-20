@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { usePocketbase } from "~/utils/pocketbase";
+import { usePocketbase } from "~/util/pocketbase";
 
 const { identifier } = defineProps({
   identifier: { type: String, required: true },

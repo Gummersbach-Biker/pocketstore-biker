@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { usePocketbase } from '~/utils/pocketbase';
+import { usePocketbase } from '~/util/pocketbase';
 import { useRoute, useRouter } from 'vue-router';
 
 const pb = usePocketbase();
