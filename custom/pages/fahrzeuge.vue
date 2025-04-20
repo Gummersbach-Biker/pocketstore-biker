@@ -10,10 +10,8 @@
 
 <script setup lang="ts">
 import { usePocketBase } from '~/util/pocketbase'
-import { useBreadcrumbStore } from '~/stores/breadcrumb';
 import { storeToRefs } from 'pinia'
 
-const store = useBreadcrumbStore();
 const vehicles = ref([]);
 
 const pb = usePocketBase();
@@ -24,12 +22,5 @@ const load = async () => {
 
 onMounted(() => {
     load();
-
-    store.clear();
-    store.add({
-        label: 'Fahrzeuge',
-        link: 'fahrzeuge/',
-        id: 'fahrzeuge'
-    });
 })
 </script>
