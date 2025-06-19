@@ -1,4 +1,0 @@
-[submodule "baseline"]
-	path = baseline
-	url = https://github.com/pocketstore-io/storefront.git
-	branch = main
