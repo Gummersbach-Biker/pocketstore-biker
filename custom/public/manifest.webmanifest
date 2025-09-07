@@ -1,0 +1,16 @@
+{
+    "name": "Gummersbach-Biker.Shop",
+    "short_name": "Biker",
+    "description": "My Awesome Nuxt 3 Application of Gummerbach-Biker.shop",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#1f6fed",
+    "icons": [
+        {
+            "src": "/biker-logo.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}
