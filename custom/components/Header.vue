@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <section class="header bg-[#113F67] mb-3 mx-auto max-w-6xl text-white px-3 py-3">
     <section class="flex justify-between">
@@ -8,7 +5,15 @@
         <img src="/biker-logo.svg" class="h-12" alt="">
         <span class="ml-3 text-white font-bold text-lg">Gummersbach<br>Biker.shop</span>
       </a>
-      <section class="navigation flex items-end md:flex-col">
+      <section class="menu md:hidden">
+        <button v-if="!open" @click="open = !open" class="btn btn-primary btn-square">
+          <FontAwesomeIcon size="2x" :icon="['fas', 'bars']"/>
+        </button>
+        <button v-else class="btn btn-primary btn-square" @click="open = !open">
+          <FontAwesomeIcon size="2x" :icon="['fas', 'times']"/>
+        </button>
+      </section>
+      <section class="navigation hidden md:flex items-end md:flex-col">
         <ul class="flex space-x-5 min-w-md">
           <li>
             <a href="/de/category/helm.html">
@@ -29,12 +34,6 @@
             </a>
           </li>
           <li>
-            <a href="/de/wunschzettel">
-              <FontAwesomeIcon :icon="['fas', 'heart']"/>
-              <span class="ml-3">Wunschzettel</span>
-            </a>
-          </li>
-          <li>
             <a href="/de/checkout">
               <FontAwesomeIcon :icon="['fas', 'shopping-cart']"/>
               <span class="ml-3">Warenkorb</span>
@@ -48,7 +47,10 @@
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import {onMounted} from 'vue'
+import {useLocalStorage} from '@vueuse/core'
+const open = useLocalStorage('navigation', false, {});
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 useHead({
   link: [{
@@ -57,5 +59,9 @@ useHead({
     href: '/biker-logo.svg'
   }]
 })
+
+onMounted(()=>{
+  open.value = false;
+});
 
 </script>
