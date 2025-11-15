@@ -3,7 +3,9 @@
     <section class="flex justify-between">
       <a href="/" class="logo flex items-center">
         <img src="/biker-logo.svg" class="h-12" alt="">
-        <span class="ml-3 text-white font-bold text-lg">Gummersbach<br>Biker.shop</span>
+        <span class="ml-3 text-white font-bold text-lg">
+          Gummersbach<br>Biker.shop
+        </span>
       </a>
       <section class="menu md:hidden">
         <button v-if="!open" @click="open = !open" class="btn btn-primary btn-square">
@@ -44,13 +46,30 @@
       </section>
     </section>
   </section>
+  <section v-if="open" class="mx-3 bg-white block mb-3 px-3 py-3">
+    <section class="grid grid-cols-6 gap-3">
+      <div class="col-span-3">
+        <a href="/de/category/helm.html" class="btn btn-primary btn-block">Helme</a>
+      </div>
+      <div class="col-span-3">
+        <a href="/de/category/kleidung.html" class="btn btn-primary btn-block">Kleidung</a>
+      </div>
+      <div class="col-span-3">
+        <a href="/de/category/motorräder.html" class="btn btn-primary btn-block">Motorräder</a>
+      </div>
+      <div class="col-span-3">
+        <a href="/de/bikes" class="btn btn-primary btn-block">Bikes</a>
+      </div>
+    </section>
+  </section>
 </template>
 
 <script setup lang="ts">
 import {onMounted} from 'vue'
 import {useLocalStorage} from '@vueuse/core'
+
 const open = useLocalStorage('navigation', false, {});
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 useHead({
   link: [{
@@ -60,7 +79,7 @@ useHead({
   }]
 })
 
-onMounted(()=>{
+onMounted(() => {
   open.value = false;
 });
 
