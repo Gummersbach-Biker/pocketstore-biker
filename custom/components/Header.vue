@@ -16,33 +16,34 @@
         </button>
       </section>
       <section class="navigation hidden md:flex items-end md:flex-col">
-        <ul class="flex space-x-5 min-w-md">
-          <li>
-            <a href="/de/category/helm.html">
-              <FontAwesomeIcon :icon="['fas', 'helmet-safety']"/>
-              <span class="ml-3">Helme</span>
-            </a>
-          </li>
-          <li>
-            <a href="/de/category/kleidung.html">
-              <FontAwesomeIcon :icon="['fas', 'user-secret']"/>
-              <span class="ml-3">Kleidung</span>
-            </a>
-          </li>
-          <li>
-            <a href="/de/category/motorräder.html">
-              <FontAwesomeIcon :icon="['fas', 'motorcycle']"/>
-              <span class="ml-3">Bikes</span>
-            </a>
-          </li>
-          <li>
-            <a href="/de/checkout">
-              <FontAwesomeIcon :icon="['fas', 'shopping-cart']"/>
-              <span class="ml-3">Warenkorb</span>
-            </a>
-          </li>
-        </ul>
-        <a href="/de/mieten" class="btn btn-sm btn-primary btn-block mt-3">Fahrzeug mieten</a>
+        <nav class="flex space-x-6">
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'helmet-safety']"/>
+            <span>Helme</span>
+          </div>
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'person']"/>
+            <span>Kleidung</span>
+          </div>
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'shoe-prints']"/>
+            <span>Schuhe</span>
+          </div>
+        </nav>
+        <nav class="flex space-x-6 mt-2">
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'wrench']"/>
+            <span>Werkstatt</span>
+          </div>
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'euro']"/>
+            <span>kaufen</span>
+          </div>
+          <div class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'clock']"/>
+            <span>mieten</span>
+          </div>
+        </nav>
       </section>
     </section>
   </section>
@@ -58,7 +59,7 @@
         <a href="/de/category/motorräder.html" class="btn btn-primary btn-block">Motorräder</a>
       </div>
       <div class="col-span-3">
-        <a href="/de/bikes" class="btn btn-primary btn-block">Bikes</a>
+        <NuxtLink class="btn btn-primary btn-block" :to="$localePath('bikes')">Motorräder</NuxtLink>
       </div>
     </section>
   </section>
