@@ -31,6 +31,10 @@
           </a>
         </nav>
         <nav class="flex space-x-6 mt-2">
+          <a :href="$localePath('/blog')" class="col">
+            <font-awesome-icon class="mr-2" :icon="['fas', 'rss']"/>
+            <span>Blog</span>
+          </a>
           <a :href="$localePath('/werkstatt')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'wrench']"/>
             <span>Werkstatt</span>
@@ -50,13 +54,16 @@
   <section v-if="open" class="mx-3 bg-white block mb-3 px-3 py-3">
     <section class="grid grid-cols-6 gap-3">
       <div class="col-span-3">
+        <a href="/de/blog" class="btn btn-primary btn-block">Blog</a>
+      </div>
+      <div class="col-span-3">
         <a href="/de/category/helm.html" class="btn btn-primary btn-block">Helme</a>
       </div>
       <div class="col-span-3">
         <a href="/de/category/kleidung.html" class="btn btn-primary btn-block">Kleidung</a>
       </div>
       <div class="col-span-3">
-        <a href="/de/category/motorräder.html" class="btn btn-primary btn-block">Motorräder</a>
+        <a href="/de/category/schuhe.html" class="btn btn-primary btn-block">Schuhe</a>
       </div>
       <div class="col-span-3">
         <NuxtLink class="btn btn-primary btn-block" :to="$localePath('bikes')">mieten</NuxtLink>
