@@ -17,32 +17,32 @@
       </section>
       <section class="navigation hidden md:flex items-end md:flex-col">
         <nav class="flex space-x-6">
-          <div class="col">
+          <a :href="$localePath('/category/helme.html')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'helmet-safety']"/>
             <span>Helme</span>
-          </div>
-          <div class="col">
+          </a>
+          <a :href="$localePath('/category/kleidung.html')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'person']"/>
             <span>Kleidung</span>
-          </div>
-          <div class="col">
+          </a>
+          <a :href="$localePath('/category/schuhe.html')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'shoe-prints']"/>
             <span>Schuhe</span>
-          </div>
+          </a>
         </nav>
         <nav class="flex space-x-6 mt-2">
-          <div class="col">
+          <a :href="$localePath('/werkstatt')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'wrench']"/>
             <span>Werkstatt</span>
-          </div>
-          <div class="col">
+          </a>
+          <a :href="$localePath('/categories')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'euro']"/>
             <span>kaufen</span>
-          </div>
-          <div class="col">
+          </a>
+          <a :href="$localePath('bikes')" class="col">
             <font-awesome-icon class="mr-2" :icon="['fas', 'clock']"/>
             <span>mieten</span>
-          </div>
+          </a>
         </nav>
       </section>
     </section>
@@ -59,7 +59,10 @@
         <a href="/de/category/motorräder.html" class="btn btn-primary btn-block">Motorräder</a>
       </div>
       <div class="col-span-3">
-        <NuxtLink class="btn btn-primary btn-block" :to="$localePath('bikes')">Motorräder</NuxtLink>
+        <NuxtLink class="btn btn-primary btn-block" :to="$localePath('bikes')">mieten</NuxtLink>
+      </div>
+      <div class="col-span-3">
+        <NuxtLink class="btn btn-primary btn-block" :to="$localePath('categories')">kaufen</NuxtLink>
       </div>
     </section>
   </section>
