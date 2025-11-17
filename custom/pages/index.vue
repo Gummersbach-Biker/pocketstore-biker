@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import {addBreadcrumb} from "~/util/breadcrumbs";
+import {addBreadcrumb} from "~/utils/breadcrumbs";
 const { t } = useI18n();
 useHead({
     title: t("general.title"),
@@ -22,7 +22,7 @@ useHead({
 
 onMounted(() => {
   addBreadcrumb({
-    label: 'test',
+    code: 'test',
     link: 'test123',
     icon: 'question'
   })
