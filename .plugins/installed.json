@@ -11,6 +11,11 @@
   },
   {
     "version": "latest",
+    "name": "bike-rental",
+    "vendor": "pocketstore-io"
+  },
+  {
+    "version": "latest",
     "name": "breadcrumb",
     "vendor": "pocketstore-io"
   },
@@ -72,6 +77,16 @@
   {
     "version": "latest",
     "name": "product-tabs",
+    "vendor": "pocketstore-io"
+  },
+  {
+    "version": "latest",
+    "name": "simple-blog",
+    "vendor": "pocketstore-io"
+  },
+  {
+    "version": "latest",
+    "name": "stores",
     "vendor": "pocketstore-io"
   },
   {
