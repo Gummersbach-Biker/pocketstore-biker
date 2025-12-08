@@ -25,11 +25,6 @@
   },
   {
     "version": "latest",
-    "name": "bike-rental",
-    "vendor": "pocketstore-io"
-  },
-  {
-    "version": "latest",
     "name": "breadcrumb",
     "vendor": "pocketstore-io",
     "revision": "7810586216aaacaad98d4872a373edfdd5ddc38e"
@@ -78,6 +73,24 @@
   },
   {
     "version": "latest",
+    "name": "stores",
+    "vendor": "pocketstore-io",
+    "revision": "4e6544bfef43802fc35619bb6cb6a43c31834958"
+  },
+  {
+    "version": "0.0.1.0",
+    "name": "simple-blog",
+    "vendor": "pocketstore-io",
+    "revision": "0.0.1.0"
+  },
+  {
+    "version": "latest",
+    "name": "bike-rental",
+    "vendor": "pocketstore-io",
+    "revision": "731b7165996dc4a5033f83f2548d165eaa4c12ef"
+  },
+  {
+    "version": "latest",
     "name": "disclaimer-demo",
     "vendor": "pocketstore-io",
     "revision": "94226143799c15f2e6c4a61b3d8e79e61c149f40"
@@ -102,19 +115,20 @@
   },
   {
     "version": "latest",
-    "name": "product-tabs",
-    "vendor": "pocketstore-io"
+    "name": "bug-reporting",
+    "vendor": "pocketstore-io",
+    "revision": "2bfdb427d7912e3f65c2f845ed72ae08c1020d83"
+  },
+  {
+    "version": "0.0.1.2",
+    "name": "hello-world",
+    "vendor": "pocketstore-io",
+    "revision": "0.0.1.2"
   },
   {
     "version": "latest",
     "name": "image-slider",
     "vendor": "pocketstore-io",
     "revision": "22771aa0c2bed1423002d71634dfcb19915f0011"
-  },
-  {
-    "version": "latest",
-    "name": "product-reviews",
-    "vendor": "pocketstore-io",
-    "revision": "42a4a5dd093989f9edb13635f5cea7e17cc13528"
   }
 ]
