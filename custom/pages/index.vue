@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import {addBreadcrumb} from "~/utils/breadcrumb";
 
-const {t,te} = useI18n();
+const {t, te} = useI18n();
 useHead({
   title: t("general.title"),
   meta: [
