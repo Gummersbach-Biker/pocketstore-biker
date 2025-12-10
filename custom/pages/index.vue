@@ -11,15 +11,11 @@
 import {addBreadcrumb} from "~/utils/breadcrumb";
 
 const {t, te} = useI18n();
-useHead({
+
+useSeoMeta({
   title: t("general.title"),
-  meta: [
-    {
-      name: 'description',
-      content: te("general.description") ? t("general.description") : 'PocketStore.io is a Open Source Shop Framework which is based on PocketBase and made with Nuxt/VueJs by Jonathan Martz.'
-    }
-  ]
-});
+  description: te("general.description") ? t("general.description") : 'PocketStore.io is a Open Source Shop Framework which is based on PocketBase and made with Nuxt/VueJs by Jonathan Martz.'
+})
 
 onMounted(() => {
   addBreadcrumb({
