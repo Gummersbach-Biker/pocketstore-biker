@@ -1,23 +1,24 @@
 <template>
   <section class="page">
     <div class="mx-auto max-w-6xl grid grid-cols-6 gap-3">
-      <HomepageHero />
-      <CatalogProductGrid identifier="nerd" />
+      <HomepageHero/>
+      <CatalogProductGrid identifier="nerd"/>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import {addBreadcrumb} from "~/utils/breadcrumb";
-const { t } = useI18n();
+
+const {t,te} = useI18n();
 useHead({
-    title: t("general.title"),
-    meta: [
-      {
-        name: 'description',
-        content: 'PocketStore.io is a Open Source Shop Framework which is based on PocketBase and made with Nuxt/VueJs by Jonathan Martz.'
-      }
-    ]
+  title: t("general.title"),
+  meta: [
+    {
+      name: 'description',
+      content: te("general.description") ? t("general.description") : 'PocketStore.io is a Open Source Shop Framework which is based on PocketBase and made with Nuxt/VueJs by Jonathan Martz.'
+    }
+  ]
 });
 
 onMounted(() => {
